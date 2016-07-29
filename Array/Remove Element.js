@@ -22,5 +22,10 @@ What happens when the elements to remove are rare?*/
  * @return {number}
  */
 var removeElement = function(nums, val) {
-    
+    for(var i=0;i<nums.length;i++) {
+    	if(nums[i] === val) nums.splice(i--, 1);
+    }
+    return nums;
 };
+
+console.log(removeElement([3,2,2,3], 3));
